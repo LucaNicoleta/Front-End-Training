@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+body
+    {
+    width: 100%;
+    height: 100%;
+    background-image:url(https://cdn.wallpapersafari.com/24/53/qoSOWN.jpg);
+      background-color:black;
+    background-size: cover;
+      background-repeat: no-repeat;
+    background-attachment:fixed;
+  font-family: 'Yellowtail', cursive;
+}
+#quote-box {
+  border-style: solid none;
+  border-width: 1px 0px;
+  border-color:#996600;
+  width:40%;
+  height:199px;;
+  background-image: url(https://image.shutterstock.com/mosaic_250/224746/429496486/stock-photo-texture-of-old-paper-429496486.jpg);
+  background-size:cover;
+  padding:2% 1%;
+   font-family: 'Yellowtail', cursive;
+  font-size:250%;
+}
+#author{
+  font-family:'Akaya Kanadaka'; 
+}
+
+#pergament{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100%; 
+  margin-top:5%; 
+}
+#buttons{
+  display:flex;
+  width:44%;
+  justify-content:space-between;
+  margin-top:3%;
+}
+.perg{
+  border: 2px solid #996600;
+   background-image: url(https://image.shutterstock.com/mosaic_250/224746/429496486/stock-photo-texture-of-old-paper-429496486.jpg);
+  background-size:cover;
+  filter:brightness(80%);
+   width:2%;
+  height:200px;
+}
+h2{
+  font-family: 'Yellowtail', cursive;
+}
