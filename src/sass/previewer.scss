@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Big+Shoulders+Stencil+Display:wght@300&family=Monoton&family=Press+Start+2P&display=swap');
+$color1 : white;
+$color2 : black;
+$blue:0;
+$purple: 260;
+$font: 'Audiowide', cursive;
+@mixin header($type) {
+    font-weight: bold;
+    font-family: 'Monoton', cursive;
+    @if $type == 1 {
+      
+    background-color:$color2;
+    color:$color1;
+    
+    }@else{
+        background-color:$color1;
+        color:$color2;
+    }
+    
+}
+@mixin tab($type) {
+    @if $type == 1 {
+      
+        background-color:$color2;
+        border: 5px solid $color1;
+        
+        }@else{
+            background-color:$color1;
+            border: 5px solid $color2;
+        }
+}
+@mixin text($type) {
+    font-size:150%;
+    font-family: 'Press Start 2P', cursive;
+    font-weight:bold;
+    -webkit-text-stroke-width: 2px;
+    @if $type == 1 {
+         color:$color1;
+         -webkit-text-stroke-color: $color2;
+         text-shadow: 3px 0px 2px $color2 ;
+        }@else{
+            color:$color2;
+         -webkit-text-stroke-color: $color1;
+         text-shadow: 3px 0px 2px $color1;
+        } 
+}
+@mixin area($type) {
+    overflow:auto;   
+    padding:2%;  
+    font-family: $font;
+    font-size:150%;
+    @if $type==1{
+        background-color:#d9d9d9;
+        color:$color2;
+        border:10px double $color2;
+    }@else{
+        background-color:#333333;//hsl($blue,100%,85%);;
+        color:$color1;
+        border:10px double $color1;
+    }
+}
+body{
+  
+  #editor-tab{
+  @include tab(1)
+  }
+  #editor-header{ 
+  @include header(1)
+  }
+  #preview-tab{
+    @include tab(2)
+  }
+  #preview-header{
+  @include header(2)
+  } 
+}
+#editor{
+ @include area(1)
+}
+#preview{
+ @include area(2)
+}
+#headerPreviewer{
+   
+  font-weight:bold;
+  color:$color1;
+}
+.white-black-text{
+  @include text(1)
+
+}
+.black-white-text{
+@include text(2)
+}

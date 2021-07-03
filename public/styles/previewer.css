@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Big+Shoulders+Stencil+Display:wght@300&family=Monoton&family=Press+Start+2P&display=swap");
+body #editor-tab {
+  background-color: black;
+  border: 5px solid white; }
+
+body #editor-header {
+  font-weight: bold;
+  font-family: 'Monoton', cursive;
+  background-color: black;
+  color: white; }
+
+body #preview-tab {
+  background-color: white;
+  border: 5px solid black; }
+
+body #preview-header {
+  font-weight: bold;
+  font-family: 'Monoton', cursive;
+  background-color: white;
+  color: black; }
+
+#editor {
+  overflow: auto;
+  padding: 2%;
+  font-family: "Audiowide", cursive;
+  font-size: 150%;
+  background-color: #d9d9d9;
+  color: black;
+  border: 10px double black; }
+
+#preview {
+  overflow: auto;
+  padding: 2%;
+  font-family: "Audiowide", cursive;
+  font-size: 150%;
+  background-color: #333333;
+  color: white;
+  border: 10px double white; }
+
+#headerPreviewer {
+  font-weight: bold;
+  color: white; }
+
+.white-black-text {
+  font-size: 150%;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  color: white;
+  -webkit-text-stroke-color: black;
+  text-shadow: 3px 0px 2px black; }
+
+.black-white-text {
+  font-size: 150%;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  color: black;
+  -webkit-text-stroke-color: white;
+  text-shadow: 3px 0px 2px white; }

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geostar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanalei&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@800&display=swap");
+body {
+  color: white;
+  background: radial-gradient(circle at center, #99ccff 60%, #33ccff); }
+
+header {
+  position: relative;
+  height: 700px;
+  font-family: "Jomhuria", cursive;
+  font-size: 45px; }
+  header #homeHeader {
+    font-size: 170%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: #337ab7; }
+  header img {
+    height: 100%;
+    width: 100%; }
+
+.row {
+  margin: auto; }
+
+hr {
+  border: 5px solid white; }
+
+main {
+  background-color: #33ccff;
+  border-top: 50px solid white;
+  padding-top: 3%;
+  margin: 0;
+  font-size: 150%;
+  font-family: "Jomhuria", cursive; }
+  main .label {
+    background-color: white;
+    color: #337ab7;
+    border: 5px none white; }
+  main img {
+    width: 50%;
+    height: 50%;
+    border: 10px none white; }
+  main img:hover, main .label:hover {
+    border-style: double; }
