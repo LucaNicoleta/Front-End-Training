@@ -30,6 +30,8 @@ const authors=["Lao Tzu","Friedrich Nietzsche","John Lennon","Joe Kennedy","Maha
 //Redux
 const NEW_QUOTE='NEW_QUOTE';
 const CHANGE_VOLUME='CHANGE_VOLUME';
+const ADD_SONG='ADD_SONG';
+const DELETE_SONG='DELETE_SONG';
 //const TOGGLE_VOLUME='TOGGLE_VOLUME';
 const newAction = () => {
   return {
@@ -47,6 +49,18 @@ const changeVolume = (inc) => {
     type: TOGGLE_VOLUME
   }
 }*/
+const addSong = (song) => {
+  return {
+    type: ADD_SONG,
+    song: song
+  }
+}
+const deleteSong = (song) => {
+  return {
+    type: DELETE_SONG,
+    song: song
+  }
+}
 const rand = getRandomInt(authors.length);
 const initialStateQuote={
   author: authors[rand],
@@ -89,9 +103,20 @@ const volumeReducer = (state={volume: 50, volumeIcon: 'up'},action)=>{
       return state;
   }
 }
+const songsReducer = (state=[], action)=>{
+  switch(action.type){
+    case ADD_SONG:
+      return [...state,action.song];
+    case DELETE_SONG:
+      return [...state.slice(0,action.song),...state.slice(action.song+1,state.length)];
+    default:
+      return state;
+  }
+}
 const reducer = combineReducers({
   quote: quoteReducer,
-  volume: volumeReducer
+  volume: volumeReducer,
+  songs: songsReducer
 });
 const store = createStore(reducer);
 console.log('store'+store.getState());
@@ -100,7 +125,8 @@ const mapStateToProps = (state) => {
   return {author: state.quote.author,
          quote: state.quote.quote,
          volume: state.volume.volume,
-        volumeIcon: state.volume.volumeIcon}
+        volumeIcon: state.volume.volumeIcon,
+        songs: state.songs}
 };
  
 const mapDispatchToProps = (dispatch) => {
@@ -111,6 +137,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     changeVolume: (inc) =>{
       dispatch(changeVolume(inc));
+    },
+    deleteSong: (index) =>{
+      dispatch(deleteSong(index))
+    },
+    addSong: (song) =>{
+      dispatch(addSong(song))
     }
   }
 };

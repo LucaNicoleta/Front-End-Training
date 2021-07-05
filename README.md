@@ -20,7 +20,14 @@ When I enter GitHub flavored Markdown into the "Editor" element, the text is ren
 
 
 # -Drum Machine
-![image](https://user-images.githubusercontent.com/61989219/124347265-5b922000-dbec-11eb-8f90-015ed317685b.png)
+![image](https://user-images.githubusercontent.com/61989219/124491485-06a50400-ddbc-11eb-801c-b51df8ded5d4.png)
 
 
-This web page contains 9 clickable elements, each of them composed of an image describing a part of a drum set and a text specifying a key. Pressing the corresponding key or clicking the element will have as effect playing an audio with the sound made by that component. You can also change the volume using the "Arrow Up" and "Arrow Down" keys.
+This web page contains 9 clickable elements, each of them composed of an image describing a part of a drum set and a text specifying a key. Pressing the corresponding key or clicking the element will have as effect playing an audio with the sound made by that component. You can change the volume using the "Arrow Up" and "Arrow Down" keys. You can also create songs composed of these sounds. For that, you need to click "Record" and after that every audio selected will be stored until you click "Stop recording", which will open the following modal:
+![image](https://user-images.githubusercontent.com/61989219/124490414-ba0cf900-ddba-11eb-9ab0-a9b945bfcbb0.png)
+
+If we select "Yes", a new item will be added under the record button representing the new created song, with two options illustrated by two icons. If we press the trash icon, the song will be deleted from memory and the item removed and if we click the "play" icon, all the audio clips from the song will be played in order.
+![image](https://user-images.githubusercontent.com/61989219/124491592-1d4b5b00-ddbc-11eb-9932-6511cb910917.png)
+
+
+
